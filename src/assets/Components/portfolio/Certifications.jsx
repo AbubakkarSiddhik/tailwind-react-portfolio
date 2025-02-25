@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import CambridgeImg from "./Cambridge.jpg";
 import JustriseImg from "./Justrise.jpg";
 import MernImg from "./Mern.jpg";
-import MLfrontendImg from "./MindLusterFrontEnd.jpg";
+import MLfrontendImg from "./MindlusterFrontEnd.jpg";
 import MLreactImg from "./MindLusterReact.jpg";
 import MongoDBImg from "./MongoDB.jpg";
 import NovitechFSDImg from "./NovitechFSD.jpg";
