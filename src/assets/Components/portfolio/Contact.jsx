@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
-  const defaultText = "Hello , Have a great day. I'm from your Portfolio website...";
+  const defaultText = "Hi Siddhik, I'd love to connect! Here's my message...";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(defaultText);
@@ -66,7 +66,6 @@ function Contact() {
               <label className="block text-lg font-medium">Message</label>
               <textarea
                 rows="4"
-                value={message}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-400"
                 required
