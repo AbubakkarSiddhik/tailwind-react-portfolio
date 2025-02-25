@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './assets/Components/portfolio/Header'
 import Hero from './assets/Components/portfolio/Hero'
 import About from './assets/Components/portfolio/About'
