@@ -5,22 +5,16 @@ function Contact() {
   const defaultText = "Hi Siddhik, I'd love to connect! Here's my message...";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState(defaultText);
-
-  const handleChange = (e) => {
-    if (!e.target.value.startsWith(defaultText)) {
-      setMessage(defaultText);
-    } else {
-      setMessage(e.target.value);
-    }
-  };
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const finalMessage = message.trim() === "" ? defaultText : message;
+    
     const encodedMessage = encodeURIComponent(
-      `Hello, my name is ${name}.\nEmail: ${email}\nMessage: ${message}`
+      `Hello, my name is ${name}.\nEmail: ${email}\nMessage: ${finalMessage}`
     );
-    const whatsappUrl = `https://wa.me/+918248794519?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/+911234567899?text=${encodedMessage}`; 
     window.open(whatsappUrl, "_blank");
   };
 
@@ -66,7 +60,9 @@ function Contact() {
               <label className="block text-lg font-medium">Message</label>
               <textarea
                 rows="4"
-                onChange={handleChange}
+                placeholder="Type your message here..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full p-3 rounded-md bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-400"
                 required
               ></textarea>
