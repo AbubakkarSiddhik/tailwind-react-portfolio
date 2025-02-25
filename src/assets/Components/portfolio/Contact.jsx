@@ -16,7 +16,7 @@ function Contact() {
       `Hello, my name is ${name}.\nEmail: ${email}\nMessage: ${finalMessage}`
     );
 
-    const whatsappUrl = `https://wa.me/+911234567899?text=${encodedMessage}`; 
+    const whatsappUrl = `https://wa.me/+918248794519?text=${encodedMessage}`; 
     window.open(whatsappUrl, "_blank");
   };
 
