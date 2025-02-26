@@ -4,6 +4,7 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaGithub,
 } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb } from "react-icons/si";
+import resumeFile from "./resume.pdf";
 
 function About() {
   return (
@@ -43,7 +44,7 @@ function About() {
      
 
         <div className="mt-6 flex justify-center md:justify-start space-x-4">
-          <a href="/contact" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md transition duration-300">
+          <a href={resumeFile} className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md transition duration-300">
             Hire Me
           </a>
           <a href="/projects" className="px-6 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg shadow-md transition duration-300">
