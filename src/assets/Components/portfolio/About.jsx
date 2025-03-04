@@ -47,7 +47,7 @@ function About() {
           <a href={resumeFile} className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md transition duration-300">
             Hire Me
           </a>
-          <a href="/projects" className="px-6 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg shadow-md transition duration-300">
+          <a href="/#projects" className="px-6 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg shadow-md transition duration-300">
             View Projects
           </a>
         </div>
