@@ -11,9 +11,9 @@ function Hero() {
     <section className="flex flex-col md:flex-row items-center justify-between p-10 bg-gray-900 text-white min-h-screen">
       <div className="md:w-1/2 text-center md:text-left space-y-4">
         <h1 className="text-5xl font-bold">Hi</h1>
-        <h2 className="text-4xl font-semibold">I'm <span className="text-blue-400">Siddhik</span></h2>
+        <h2 className="text-4xl font-semibold">I'm <span className="text-blue-400">Abubakkar Siddhik</span></h2>
         <h3 className="text-2xl font-medium">Software Developer</h3>
-        <p className="text-lg text-gray-400">I create amazing web experiences and love building modern applications.</p>
+        <p className="text-lg text-gray-400">Passionate about building responsive and dynamic web applications with a focus on user-friendly solutions.</p>
         
         <button 
           className="mt-4 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md transition duration-300"
@@ -29,7 +29,7 @@ function Hero() {
           <a href="https://www.linkedin.com/in/abubakkarsiddhik" target="_blank" rel="noopener noreferrer">
             <CiLinkedin className="text-3xl md:text-4xl cursor-pointer text-gray-400 hover:text-blue-500 transition duration-300" />
           </a>
-          <a href="mailto:abubakkarsiddhik12@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:abc@gmail.com" target="_blank" rel="noopener noreferrer">
             <CiMail className="text-3xl md:text-4xl cursor-pointer text-gray-400 hover:text-orange-500 transition duration-300" />
           </a>
         </div>
