@@ -1,132 +1,109 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import CambridgeImg from "./Cambridge.jpg";
-import JustriseImg from "./Justrise.jpg";
-import MernImg from "./Mern.jpg";
-import MLfrontendImg from "./MindlusterFrontEnd.jpg";
-import MLreactImg from "./MindLusterReact.jpg";
-import MongoDBImg from "./MongoDB.jpg";
-import NovitechFSDImg from "./NovitechFSD.jpg";
-import NovitechReactImg from "./NovitechReact.jpg";
-import PythonImg from "./Python.jpg";
-import SimplileanReactImg from "./SimplilearnReact.jpg";
-import WPIImg from "./WPI.jpg";
+import React, { useState } from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
+function Contact() {
+  const defaultText = "Hi Siddhik, I'd love to connect! Here's my message...";
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-const certifications = [
-  {
-    id: 1,
-    title: "English Communication Certification",
-    issuer: "CAMBRIDGE",
-    image: CambridgeImg,
-  },
-  {
-    id: 2,
-    title: "Front-End Development",
-    issuer: "JustRise Technologies Pvt Ltd",
-    image: JustriseImg,
-  },
-  {
-    id: 3,
-    title: "MERN Stack Certification",
-    issuer: "Simplilearn",
-    image:  MernImg,
-  },
-  {
-    id: 4,
-    title: "HTML, CSS & JavaScript",
-    issuer: "MindLuster",
-    image: MLfrontendImg,
-  },
-  {
-    id: 5,
-    title: "React.js for Beginners",
-    issuer: "MindLuster",
-    image: MLreactImg,
-  },
-  {
-    id: 6,
-    title: "MongoDB Basics",
-    issuer: "Simplilearn",
-    image: MongoDBImg,
-  },
-  {
-    id: 7,
-    title: "Full-Stack Web Dev",
-    issuer: "NoviTech R&D Pvt Ltd",
-    image: NovitechFSDImg,
-  },
-  {
-    id: 8,
-    title: "React.js Completion",
-    issuer: "NoviTech R&D Pvt Ltd",
-    image: NovitechReactImg,
-  },
-  {
-    id: 9,
-    title: "Python Programming",
-    issuer: "Quality Thought",
-    image: PythonImg,
-  },
-  {
-    id: 10,
-    title: "React.js for Beginners",
-    issuer: "Simplilearn",
-    image: SimplileanReactImg,
-  },
-  {
-    id: 11,
-    title: "Workshop Completion",
-    issuer: "Wisdom Praise Infotech",
-    image: WPIImg,
-  },
-];
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const finalMessage = `${defaultText}\n\n${message.trim()}`;
 
-function Certifications() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-    ],
+    const encodedMessage = encodeURIComponent(
+      `Hello, my name is ${name}.\nEmail: ${email}\nMessage: ${finalMessage}`
+    );
+
+    const whatsappUrl = `https://wa.me/+918248794519?text=${encodedMessage}`; 
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
-    <section className="p-10 bg-gray-900 text-white min-h-screen">
+    <section className="p-10 bg-gray-900 text-white min-h-screen flex flex-col items-center">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-semibold">
-          My <span className="text-blue-400">Certifications</span>
+          Contact <span className="text-blue-400">Me</span>
         </h2>
-        <p className="text-gray-400 mt-2">Here are some of the certifications I've earned.</p>
+        <p className="text-gray-400 mt-2">
+          Feel free to reach out for collaborations or just a chat!
+        </p>
       </div>
 
-      <Slider {...settings} className="md:w-10/12 mx-auto">
-  {certifications.map((cert) => (
-    <div key={cert.id} className="p-4">
-      <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden text-center">
-        <img src={cert.image} alt={cert.title} className="w-full h-56 object-cover" />
-        <div className="p-4">
-          <h3 className="text-xl font-bold truncate">{cert.title}</h3>
-          <p className="text-gray-400 text-sm">{cert.issuer}</p>
+      <div className="w-full max-w-4xl flex flex-col md:flex-row bg-gray-800 p-8 rounded-lg shadow-lg">
+        <div className="md:w-2/3 pr-0 md:pr-8">
+          <form className="space-y-5" onSubmit={handleSubmit}>
+            <div>
+              <label className="block text-lg font-medium">Name</label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full p-3 rounded-md bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-lg font-medium">Email</label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-3 rounded-md bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-lg font-medium">Message</label>
+              <textarea
+                rows="4"
+                placeholder="Type your message here..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full p-3 rounded-md bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-400"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-md transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div className="md:w-1/3 flex flex-col justify-center items-center mt-6 md:mt-0 space-y-5">
+          <h3 className="text-xl font-medium">Connect with Me</h3>
+          <div className="flex space-x-6 text-4xl">
+            <a
+              href="https://www.linkedin.com/in/abubakkarsiddhik"
+              className="hover:text-blue-400 transition duration-300"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/AbubakkarSiddhik?tab=repositories"
+              className="hover:text-gray-300 transition duration-300"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.instagram.com/abubakkarsiddhik_webdev?igsh=MWNrYXd4bDM0N2p5"
+              className="hover:text-pink-500 transition duration-300"
+            >
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  ))}
-</Slider>
-
     </section>
   );
 }
 
-export default Certifications;
+export default Contact;
