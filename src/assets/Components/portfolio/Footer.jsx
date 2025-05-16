@@ -6,9 +6,8 @@ function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-5">
-        
         <p className="text-gray-400 text-center md:text-left">
-          © 2025 Siddhik. All Rights Reserved.
+          © 2025 Abubakkar Siddhik M. All Rights Reserved.
         </p>
 
         <ul className="flex space-x-6 my-4 md:my-0">
@@ -30,7 +29,6 @@ function Footer() {
             <FaInstagram />
           </a>
         </div>
-
       </div>
     </footer>
   );
