@@ -142,7 +142,7 @@ const navigate=useNavigate();
           
         </div>
            {/* Tech Stack */}
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <div className="bg-gray-800/50 mt-10 p-6 rounded-xl border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 <span className="w-3 h-3 bg-blue-400 rounded-full mr-2"></span>
                 Tech Stack
