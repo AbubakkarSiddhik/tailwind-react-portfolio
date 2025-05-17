@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import img1 from './developer.jpg';
+import img1 from './Profile.png';
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin, CiMail } from "react-icons/ci";
 
