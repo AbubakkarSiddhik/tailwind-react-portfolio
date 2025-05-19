@@ -51,7 +51,7 @@ function Hero() {
           >
             <CiLinkedin className="text-3xl md:text-4xl cursor-pointer text-gray-400 hover:text-blue-500 transition duration-300" />
           </a>
-          <a href="mailto:abc@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:abubakkarsiddhik12@gmail.com" target="_blank" rel="noopener noreferrer">
             <CiMail className="text-3xl md:text-4xl cursor-pointer text-gray-400 hover:text-orange-500 transition duration-300" />
           </a>
         </div>
