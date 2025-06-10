@@ -24,7 +24,7 @@ function Hero() {
           />
         </div>
 
-        <h3 className="text-2xl font-medium">Software Developer</h3>
+        <h3 className="text-2xl font-medium">Web Developer</h3>
         <p className="text-lg text-gray-400">
           Passionate about building responsive and dynamic web applications with a focus on user-friendly solutions.
         </p>
